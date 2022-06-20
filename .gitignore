@@ -1,0 +1,11 @@
+Pong 3D/Library/*
+Pong 3D/Logs/*
+Pong 3D/Temp/*
+Pong 3D/.vs/*
+Pong 3D/obj/*
+
+Pong 3D/.vsconfig
+Pong 3D/*.sln
+Pong 3D/*.csproj
+
+
