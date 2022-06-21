@@ -12,11 +12,12 @@ public class ScoreManager : MonoBehaviour
 
     public int maxscore;
     public BallController ball;
+    
 
     public void Addp1Score(int increment)
     {
         p1Score += increment;
-        ball.ResetBall();
+        
         if (p1Score >= maxscore)
         {
             GameOver();
@@ -25,7 +26,7 @@ public class ScoreManager : MonoBehaviour
     public void Addp2Score(int increment)
     {
         p2Score += increment;
-        ball.ResetBall();
+        
         if (p2Score >= maxscore)
         {
             GameOver();
@@ -34,7 +35,7 @@ public class ScoreManager : MonoBehaviour
     public void Addp3Score(int increment)
     {
         p3Score += increment;
-        ball.ResetBall();
+        
         if (p3Score >= maxscore)
         {
             GameOver();
@@ -43,7 +44,7 @@ public class ScoreManager : MonoBehaviour
     public void Addp4Score(int increment)
     {
         p4Score += increment;
-        ball.ResetBall();
+        
         if (p4Score >= maxscore)
         {
             GameOver();

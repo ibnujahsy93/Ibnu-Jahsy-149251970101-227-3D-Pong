@@ -8,6 +8,7 @@ TagManager:
   - P2Goal
   - P3Goal
   - P4Goal
+  - Ball
   layers:
   - Default
   - TransparentFX
