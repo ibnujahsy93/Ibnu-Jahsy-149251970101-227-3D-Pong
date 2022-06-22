@@ -12,32 +12,33 @@ public class GoalController : MonoBehaviour
     public bool isP3;
     public bool isP4;
 
+
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Ball"))
         {
-            if (isP1)
+            if (isP1 && manager.p1Score <manager.maxscore)
             {
                 Destroy(collision.gameObject);
                 manager.Addp1Score(1);
                 spawnManager.ballCount--;
                 
             }
-            else if (isP2)
+            else if (isP2 && manager.p2Score < manager.maxscore)
             {
                 Destroy(collision.gameObject);
                 manager.Addp2Score(1);
                 spawnManager.ballCount--;
                 
             }
-            else if (isP3)
+            else if (isP3 && manager.p3Score < manager.maxscore)
             {
                 Destroy(collision.gameObject);
                 manager.Addp3Score(1);
                 spawnManager.ballCount--;
                 
             }
-            else if (isP4)
+            else if (isP4 && manager.p4Score < manager.maxscore)
             {
                 Destroy(collision.gameObject);
                 manager.Addp4Score(1);

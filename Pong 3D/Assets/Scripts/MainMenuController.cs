@@ -9,4 +9,15 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
     }
+
+    public void HowToPlay()
+    {
+        SceneManager.LoadScene("How To Play");
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    
 }
