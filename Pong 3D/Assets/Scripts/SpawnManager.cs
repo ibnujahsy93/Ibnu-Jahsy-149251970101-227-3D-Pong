@@ -10,12 +10,14 @@ public class SpawnManager : MonoBehaviour
     private float timer;
     public BallController ballSpeed;
 
+    public List<Vector3> spawnPoint;
+
 
     // Start is called before the first frame update
     void Start()
     {
         timer = 0;
-        SpawnBall();
+        
     }
 
     // Update is called once per frame
@@ -26,7 +28,7 @@ public class SpawnManager : MonoBehaviour
         {
             if (ballCount < 5)
             {
-                SpawnBall();
+                SpawnBall(spawnPoint[Random.Range(0, spawnPoint.Count - 1)]);
                 timer -= spawnInterval;
             }
         }
@@ -34,44 +36,11 @@ public class SpawnManager : MonoBehaviour
         
     }
 
-    public void SpawnBall()
+    public void SpawnBall(Vector3 pos)
     {      
-        Instantiate(ballPrefab, GenerateSpawnPosition(), ballPrefab.transform.rotation);
+        Instantiate(ballPrefab, pos, ballPrefab.transform.rotation);
         ballCount++;
 
-
-
-    }
-
-    private Vector3 GenerateSpawnPosition()
-    {
-        int randomNumber = Random.Range(1, 4);
-        if (randomNumber == 1)
-        {
-            Vector3 randomPos = new Vector3(-3.9f, 0.2f, -4.12f);
-            
-            return randomPos;
-        }
-        else if(randomNumber == 2)
-        {
-            Vector3 randomPos = new Vector3(3.9f, 0.2f, -4.12f);
-            
-            return randomPos;
-        }
-        else if (randomNumber == 3)
-        {
-            Vector3 randomPos = new Vector3(-3.9f, 0.2f, 4.12f);
-            
-            return randomPos;
-        }
-        else if (randomNumber == 4)
-        {
-            Vector3 randomPos = new Vector3(3.9f, 0.2f, 4.12f);
-            
-            return randomPos;
-        }
-        return Vector3.zero;
-        
     }
 
 }
