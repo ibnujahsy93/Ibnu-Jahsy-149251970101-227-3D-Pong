@@ -111,6 +111,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resetPosition: {x: 0, y: 0, z: 0}
   rBall: {fileID: 2174021991251026551}
+  hitByPad1: 0
+  hitByPad2: 0
+  hitByPad3: 0
+  hitByPad4: 0
+  randomValueX: 0
+  randomValueZ: 0
 --- !u!54 &2174021991251026551
 Rigidbody:
   m_ObjectHideFlags: 0

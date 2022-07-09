@@ -7,7 +7,14 @@ public class BallController : MonoBehaviour
     
     public Vector3 resetPosition;
     public Rigidbody rBall;
+    public bool hitByPad1;
+    public bool hitByPad2;
+    public bool hitByPad3;
+    public bool hitByPad4;
+    public int randomValueX;
+    public int randomValueZ;
     
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,34 +51,76 @@ public class BallController : MonoBehaviour
     public void SpeedBall1()
     {
         rBall = GetComponent<Rigidbody>();
-        int randomValueX = Random.Range(2, 5);
-        int randomValueZ = Random.Range(2, 5);
+        randomValueX = Random.Range(2, 5);
+        randomValueZ = Random.Range(2, 5);
 
         rBall.velocity = new Vector3(randomValueX, 0, randomValueZ);
     }
     public void SpeedBall2()
     {
         rBall = GetComponent<Rigidbody>();
-        int randomValueX = Random.Range(-2, -5);
-        int randomValueZ = Random.Range(2, 5);
+        randomValueX = Random.Range(-2, -5);
+        randomValueZ = Random.Range(2, 5);
 
         rBall.velocity = new Vector3(randomValueX, 0, randomValueZ);
     }
     public void SpeedBall3()
     {
         rBall = GetComponent<Rigidbody>();
-        int randomValueX = Random.Range(2, 5);
-        int randomValueZ = Random.Range(-2, -5);
+        randomValueX = Random.Range(2, 5);
+        randomValueZ = Random.Range(-2, -5);
 
         rBall.velocity = new Vector3(randomValueX, 0, randomValueZ);
     }
     public void SpeedBall4()
     {
         rBall = GetComponent<Rigidbody>();
-        int randomValueX = Random.Range(-2, -5);
-        int randomValueZ = Random.Range(-2, -5);
+        randomValueX = Random.Range(-2, -5);
+        randomValueZ = Random.Range(-2, -5);
 
         rBall.velocity = new Vector3(randomValueX, 0, randomValueZ);
+    }
+
+    public void ActivateSpeedPower(float magnitude)
+    {
+
+        rBall = GetComponent<Rigidbody>();
+        randomValueX = Random.Range(-2, 5);
+        randomValueZ = Random.Range(-2, 5);
+
+        rBall.velocity = new Vector3(randomValueX * magnitude, 0, randomValueZ * magnitude);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Pad1")
+        {
+            hitByPad1 = true;
+            hitByPad2 = false;
+            hitByPad3 = false;
+            hitByPad4 = false;
+        }
+        else if (collision.gameObject.tag == "Pad2")
+        {
+            hitByPad1 = false;
+            hitByPad2 = true;
+            hitByPad3 = false;
+            hitByPad4 = false;
+        }
+        else if (collision.gameObject.tag == "Pad3")
+        {
+            hitByPad1 = false;
+            hitByPad2 = false;
+            hitByPad3 = true;
+            hitByPad4 = false;
+        }
+        else if (collision.gameObject.tag == "Pad4")
+        {
+            hitByPad1 = false;
+            hitByPad2 = false;
+            hitByPad3 = false;
+            hitByPad4 = true;
+        }
     }
 
 

@@ -9,6 +9,11 @@ TagManager:
   - P3Goal
   - P4Goal
   - Ball
+  - Pad1
+  - Pad2
+  - Pad3
+  - Pad4
+  - PadSpeed
   layers:
   - Default
   - TransparentFX

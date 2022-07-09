@@ -106,7 +106,7 @@ public class ScoreManager : MonoBehaviour
             p3Wall.GetComponent<Collider>().isTrigger = false;
 
         }
-        else if (p1Score == maxscore && p3Score == maxscore && p3Score == maxscore)
+        else if (p1Score == maxscore && p2Score == maxscore && p3Score == maxscore)
         {
 
             gameOver.GameOver();

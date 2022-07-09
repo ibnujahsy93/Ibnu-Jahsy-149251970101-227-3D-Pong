@@ -9,7 +9,7 @@ public class SpawnManager : MonoBehaviour
     public int ballCount;
     private float timer;
     public BallController ballSpeed;
-
+    public Transform spawnBallArea;
     public List<Vector3> spawnPoint;
 
 
@@ -17,7 +17,8 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         timer = 0;
-        
+        SpawnBall(spawnPoint[Random.Range(0, spawnPoint.Count - 1)]);
+
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class SpawnManager : MonoBehaviour
 
     public void SpawnBall(Vector3 pos)
     {      
-        Instantiate(ballPrefab, pos, ballPrefab.transform.rotation);
+        Instantiate(ballPrefab, pos, ballPrefab.transform.rotation, spawnBallArea);
         ballCount++;
 
     }
