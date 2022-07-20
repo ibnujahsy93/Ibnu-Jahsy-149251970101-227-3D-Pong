@@ -485,6 +485,10 @@ MonoBehaviour:
   rightKey: 0
   upKey: 114
   downKey: 102
+  isBot: 0
+  ball: {fileID: 0}
+  randomNumber: 0
+  moveLeft: 0
 --- !u!54 &299850425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -694,6 +698,10 @@ MonoBehaviour:
   rightKey: 0
   upKey: 105
   downKey: 107
+  isBot: 0
+  ball: {fileID: 0}
+  randomNumber: 0
+  moveLeft: 0
 --- !u!54 &356856681
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -818,7 +826,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 451078911}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e381172df7464547b11385744250912, type: 3}
+  m_Script: {fileID: 11500000, guid: f9d85b9c186246b4db6164901084f411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1166258002}
@@ -1144,7 +1152,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 568560786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3556842879f2e874bb59dee24bc487be, type: 3}
+  m_Script: {fileID: 11500000, guid: d06ae0adad3789948bd63c6dbda88108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1166258002}
@@ -1524,7 +1532,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 775330777}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c8c8d9c3bdcb9641b30a8a1c4e5055c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c9138849c0550348bf11ac265128b88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1166258002}
@@ -2434,6 +2442,10 @@ MonoBehaviour:
   rightKey: 275
   upKey: 0
   downKey: 0
+  isBot: 0
+  ball: {fileID: 0}
+  randomNumber: 0
+  moveLeft: 0
 --- !u!1 &1082439033
 GameObject:
   m_ObjectHideFlags: 0
@@ -3719,7 +3731,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1599730968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a038b89435277f40b0d90ef6528989a, type: 3}
+  m_Script: {fileID: 11500000, guid: 99c95ae60dd8879449ee9317fa49e40e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1166258002}
@@ -4692,6 +4704,10 @@ MonoBehaviour:
   rightKey: 100
   upKey: 0
   downKey: 0
+  isBot: 0
+  ball: {fileID: 0}
+  randomNumber: 0
+  moveLeft: 0
 --- !u!54 &1983222595
 Rigidbody:
   m_ObjectHideFlags: 0

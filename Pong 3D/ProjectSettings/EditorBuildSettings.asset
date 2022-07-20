@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/GamevsBot.unity
+    guid: ffec086bd1587eb4da70970f3016ce07
+  - enabled: 1
     path: Assets/Scenes/How To Play.unity
     guid: 151843d9ed166cb40b61e206e3a3a7cd
   m_configObjects: {}

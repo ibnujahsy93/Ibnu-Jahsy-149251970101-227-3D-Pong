@@ -37,4 +37,10 @@ public class GameOverController : MonoBehaviour
         GameIsPaused = false;
         SceneManager.LoadScene("Main Menu");
     }
+    public void ReplayvsBot()
+    {
+        pauseMenuUi.SetActive(false);
+        SceneManager.LoadScene("GamevsBot");
+        GameIsPaused = false;
+    }
 }

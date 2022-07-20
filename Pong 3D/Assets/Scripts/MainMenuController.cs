@@ -9,6 +9,10 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
     }
+    public void PlayGameVsBot()
+    {
+        SceneManager.LoadScene("GamevsBot");
+    }
 
     public void HowToPlay()
     {

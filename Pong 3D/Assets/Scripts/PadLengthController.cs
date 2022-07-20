@@ -28,7 +28,7 @@ public class PadLengthController : MonoBehaviour
             else if (GameObject.Find("Ball(Clone)").GetComponent<BallController>().hitByPad2 == true)
             {
                 Debug.Log("p2 length");
-                pad2.GetComponent<PaddleController>().DoubleScale();
+                pad2.GetComponent<BotHorizontalController>().DoubleScale();
                 manager.RemovePowerUp(gameObject);
 
 
@@ -36,7 +36,7 @@ public class PadLengthController : MonoBehaviour
             else if (GameObject.Find("Ball(Clone)").GetComponent<BallController>().hitByPad3 == true)
             {
                 Debug.Log("p3 length");
-                pad3.GetComponent<PaddleController>().DoubleScale();
+                pad3.GetComponent<BotVerticalController>().DoubleScale();
                 manager.RemovePowerUp(gameObject);
 
 
@@ -44,7 +44,7 @@ public class PadLengthController : MonoBehaviour
             else if (GameObject.Find("Ball(Clone)").GetComponent<BallController>().hitByPad4 == true)
             {
                 Debug.Log("p4 length");
-                pad4.GetComponent<PaddleController>().DoubleScale();
+                pad4.GetComponent<BotVerticalController2>().DoubleScale();
                 manager.RemovePowerUp(gameObject);
 
 

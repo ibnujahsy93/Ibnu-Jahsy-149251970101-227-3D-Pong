@@ -27,7 +27,7 @@ public class DebSpeedController : MonoBehaviour
             else if (GameObject.Find("Ball(Clone)").GetComponent<BallController>().hitByPad2 == true)
             {
                 Debug.Log("p2 debuff speed");
-                pad2.GetComponent<PaddleController>().ActivateSlowSpeed();
+                pad2.GetComponent<BotHorizontalController>().ActivateSlowSpeed();
                 manager.RemovePowerUp(gameObject);
 
 
@@ -35,7 +35,7 @@ public class DebSpeedController : MonoBehaviour
             else if (GameObject.Find("Ball(Clone)").GetComponent<BallController>().hitByPad3 == true)
             {
                 Debug.Log("p3 debuff speed");
-                pad3.GetComponent<PaddleController>().ActivateSlowSpeed();
+                pad3.GetComponent<BotVerticalController>().ActivateSlowSpeed();
                 manager.RemovePowerUp(gameObject);
 
 
@@ -43,7 +43,7 @@ public class DebSpeedController : MonoBehaviour
             else if (GameObject.Find("Ball(Clone)").GetComponent<BallController>().hitByPad4 == true)
             {
                 Debug.Log("p4 debuff speed");
-                pad4.GetComponent<PaddleController>().ActivateSlowSpeed();
+                pad4.GetComponent<BotVerticalController2>().ActivateSlowSpeed();
                 manager.RemovePowerUp(gameObject);
 
 

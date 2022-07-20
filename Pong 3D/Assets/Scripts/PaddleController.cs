@@ -12,16 +12,24 @@ public class PaddleController : MonoBehaviour
     private float timer;
     private float timer2;
     private Rigidbody rigPaddle;
+    public bool isBot;
+    public Transform ball;
+    public int randomNumber;
+    public bool moveLeft;
     
+
+
     // Start is called before the first frame update
     void Start()
     {
         rigPaddle = GetComponent<Rigidbody>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        randomNumber = Random.Range(1, 3);
         MoveObject(GetInput());
         if (timer > 0)
         {
@@ -31,7 +39,7 @@ public class PaddleController : MonoBehaviour
         {
             NormalSpeed();
             timer = 0;
-
+            
         }
 
         if (timer2 > 0)
@@ -68,6 +76,53 @@ public class PaddleController : MonoBehaviour
 
         return Vector3.zero;
     }
+
+   
+
+    private Vector3 BotMovement()
+    {
+        
+        if (randomNumber == 1)
+        {
+            moveLeft = true;
+            
+            return Vector3.left * speed;
+        }
+        else if (randomNumber == 2)
+        {
+            moveLeft = false;
+            
+            return Vector3.right * speed;
+        }
+
+        if (moveLeft == true)
+        {
+            if (transform.position.x < -1)
+            {
+                moveLeft = false;
+                Debug.Log("tes kiri");
+                
+                return Vector3.right * speed;
+            }
+        }
+        else if (moveLeft == false)
+        {
+            if (transform.position.x > 1)
+            {
+                moveLeft = true;
+                Debug.Log("tes kanan");
+
+                return Vector3.left * speed;
+            }
+        }
+
+
+
+        return Vector3.zero;
+    }
+   
+   
+    
 
     private void MoveObject(Vector3 movement)
     {

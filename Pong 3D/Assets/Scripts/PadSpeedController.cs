@@ -29,7 +29,7 @@ public class PadSpeedController : MonoBehaviour
             else if (GameObject.Find("Ball(Clone)").GetComponent<BallController>().hitByPad2 == true)
             {
                 Debug.Log("p2 speed");
-                pad2.GetComponent<PaddleController>().ActivateSpeedPower();
+                pad2.GetComponent<BotHorizontalController>().ActivateSpeedPower();
                 manager.RemovePowerUp(gameObject);
                 
 
@@ -37,7 +37,7 @@ public class PadSpeedController : MonoBehaviour
             else if (GameObject.Find("Ball(Clone)").GetComponent<BallController>().hitByPad3 == true)
             {
                 Debug.Log("p3 speed");
-                pad3.GetComponent<PaddleController>().ActivateSpeedPower();
+                pad3.GetComponent<BotVerticalController>().ActivateSpeedPower();
                 manager.RemovePowerUp(gameObject);
                 
 
@@ -45,7 +45,7 @@ public class PadSpeedController : MonoBehaviour
             else if (GameObject.Find("Ball(Clone)").GetComponent<BallController>().hitByPad4 == true)
             {
                 Debug.Log("p4 speed");
-                pad4.GetComponent<PaddleController>().ActivateSpeedPower();
+                pad4.GetComponent<BotVerticalController2>().ActivateSpeedPower();
                 manager.RemovePowerUp(gameObject);
                 
 
