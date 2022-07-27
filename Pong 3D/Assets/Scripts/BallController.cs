@@ -51,32 +51,32 @@ public class BallController : MonoBehaviour
     public void SpeedBall1()
     {
         rBall = GetComponent<Rigidbody>();
-        randomValueX = Random.Range(2, 5);
-        randomValueZ = Random.Range(2, 5);
+        randomValueX = Random.Range(3, 7);
+        randomValueZ = Random.Range(3, 7);
 
         rBall.velocity = new Vector3(randomValueX, 0, randomValueZ);
     }
     public void SpeedBall2()
     {
         rBall = GetComponent<Rigidbody>();
-        randomValueX = Random.Range(-2, -5);
-        randomValueZ = Random.Range(2, 5);
+        randomValueX = Random.Range(-3, -7);
+        randomValueZ = Random.Range(3, 7);
 
         rBall.velocity = new Vector3(randomValueX, 0, randomValueZ);
     }
     public void SpeedBall3()
     {
         rBall = GetComponent<Rigidbody>();
-        randomValueX = Random.Range(2, 5);
-        randomValueZ = Random.Range(-2, -5);
+        randomValueX = Random.Range(3, 7);
+        randomValueZ = Random.Range(-3, -7);
 
         rBall.velocity = new Vector3(randomValueX, 0, randomValueZ);
     }
     public void SpeedBall4()
     {
         rBall = GetComponent<Rigidbody>();
-        randomValueX = Random.Range(-2, -5);
-        randomValueZ = Random.Range(-2, -5);
+        randomValueX = Random.Range(-3, -7);
+        randomValueZ = Random.Range(-3, -7);
 
         rBall.velocity = new Vector3(randomValueX, 0, randomValueZ);
     }
