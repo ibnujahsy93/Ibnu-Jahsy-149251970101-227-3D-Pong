@@ -11,6 +11,7 @@ public class SpawnManager : MonoBehaviour
     public BallController ballSpeed;
     public Transform spawnBallArea;
     public List<Vector3> spawnPoint;
+    public AudioSource ballCollisionSound;
 
 
     // Start is called before the first frame update
@@ -40,6 +41,7 @@ public class SpawnManager : MonoBehaviour
     public void SpawnBall(Vector3 pos)
     {      
         Instantiate(ballPrefab, pos, ballPrefab.transform.rotation, spawnBallArea);
+        ballCollisionSound.Play();
         ballCount++;
 
     }

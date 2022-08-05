@@ -7,7 +7,7 @@ public class BotVerticalController : MonoBehaviour
     private float waitBeforeMoving = 0.1f;
     private bool hasArrived = false;
     private float movementDuration = 1.0f;
-    public bool isBot;
+    public bool isBot = true;
     public float speed;
     private float timer;
     private float timer2;

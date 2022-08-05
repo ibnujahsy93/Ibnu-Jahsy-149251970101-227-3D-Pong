@@ -35,6 +35,7 @@ public class ScoreManager : MonoBehaviour
         if (p1Score >= maxscore)
         {
             p1Wall.GetComponent<Collider>().isTrigger = false;
+            p1Wall.GetComponent<AudioSource>().mute = false;
             p1Pad.SetActive(false);
             
         }
@@ -47,6 +48,7 @@ public class ScoreManager : MonoBehaviour
         if (p2Score >= maxscore)
         {
             p2Wall.GetComponent<Collider>().isTrigger = false;
+            p2Wall.GetComponent<AudioSource>().mute = false;
             p2Pad.SetActive(false);
             
         }
@@ -59,6 +61,7 @@ public class ScoreManager : MonoBehaviour
         if (p3Score >= maxscore)
         {
             p3Wall.GetComponent<Collider>().isTrigger = false;
+            p3Wall.GetComponent<AudioSource>().mute = false;
             p3Pad.SetActive(false);
             
         }
@@ -71,6 +74,7 @@ public class ScoreManager : MonoBehaviour
         if (p4Score >= maxscore)
         {
             p4Wall.GetComponent<Collider>().isTrigger = false;
+            p4Wall.GetComponent<AudioSource>().mute = false;
             p4Pad.SetActive(false);
             
         }

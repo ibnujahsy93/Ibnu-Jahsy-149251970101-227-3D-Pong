@@ -14,6 +14,7 @@ TagManager:
   - Pad3
   - Pad4
   - PadSpeed
+  - Wall
   layers:
   - Default
   - TransparentFX

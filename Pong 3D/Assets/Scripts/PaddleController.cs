@@ -19,9 +19,12 @@ public class PaddleController : MonoBehaviour
     
 
 
+
+
     // Start is called before the first frame update
     void Start()
     {
+        
         rigPaddle = GetComponent<Rigidbody>();
         
     }
@@ -120,7 +123,7 @@ public class PaddleController : MonoBehaviour
 
         return Vector3.zero;
     }
-   
+    
    
     
 

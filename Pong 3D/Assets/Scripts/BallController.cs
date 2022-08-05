@@ -7,12 +7,16 @@ public class BallController : MonoBehaviour
     
     public Vector3 resetPosition;
     public Rigidbody rBall;
+    public AudioSource ballCollisionSound;
+    public AudioSource wallCollision;
+
     public bool hitByPad1;
     public bool hitByPad2;
     public bool hitByPad3;
     public bool hitByPad4;
     public int randomValueX;
     public int randomValueZ;
+    
     
 
     // Start is called before the first frame update
@@ -93,15 +97,29 @@ public class BallController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+
+        if (collision.gameObject.tag == "Ball")
+        {
+            ballCollisionSound.Play();
+        }
+
+        if (collision.gameObject.tag == "Wall")
+        {
+            wallCollision.Play();
+        }
+
         if (collision.gameObject.tag == "Pad1")
         {
+            wallCollision.Play();
             hitByPad1 = true;
             hitByPad2 = false;
             hitByPad3 = false;
             hitByPad4 = false;
+            
         }
         else if (collision.gameObject.tag == "Pad2")
         {
+            wallCollision.Play();
             hitByPad1 = false;
             hitByPad2 = true;
             hitByPad3 = false;
@@ -109,6 +127,7 @@ public class BallController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Pad3")
         {
+            wallCollision.Play();
             hitByPad1 = false;
             hitByPad2 = false;
             hitByPad3 = true;
@@ -116,11 +135,14 @@ public class BallController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Pad4")
         {
+            wallCollision.Play();
             hitByPad1 = false;
             hitByPad2 = false;
             hitByPad3 = false;
             hitByPad4 = true;
         }
+
+        
     }
 
 

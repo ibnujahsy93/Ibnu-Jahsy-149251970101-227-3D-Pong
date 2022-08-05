@@ -11,6 +11,7 @@ public class GoalController : MonoBehaviour
     public bool isP2;
     public bool isP3;
     public bool isP4;
+    public AudioSource wallCollision;
 
 
     private void OnTriggerEnter(Collider collision)
@@ -45,6 +46,14 @@ public class GoalController : MonoBehaviour
                 spawnManager.ballCount--;
                 
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ball")
+        {
+            wallCollision.Play();
         }
     }
 }
