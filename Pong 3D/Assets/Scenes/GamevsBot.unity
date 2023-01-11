@@ -1403,6 +1403,8 @@ MonoBehaviour:
   - {fileID: 1589949305}
   - {fileID: 1197667608}
   - {fileID: 2071939827}
+  timer: 0
+  timerDestroy: 0
 --- !u!4 &312716068
 Transform:
   m_ObjectHideFlags: 0
@@ -3096,7 +3098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2174021991251026557, guid: 5b5046b6c2b0c394da71b4384a8373e5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b5046b6c2b0c394da71b4384a8373e5, type: 3}

@@ -13,8 +13,8 @@ public class PowerUpManager : MonoBehaviour
     public Vector3 powerUpAreaMax;
     public List<GameObject> powerUpTemplateList;
     private List<GameObject> powerUpList;
-    private float timer;
-    private float timerDestroy;
+    [SerializeField]private float timer;
+    [SerializeField] private float timerDestroy;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +31,7 @@ public class PowerUpManager : MonoBehaviour
         if (timer > spawnInterval)
         {
             GenerateRandomPowerUp();
-            timer -= spawnInterval;
+            timer = 0;
 
         }
         timerDestroy += Time.deltaTime;
@@ -41,7 +41,7 @@ public class PowerUpManager : MonoBehaviour
             Destroy(powerUpList[0].gameObject);
             powerUpList.Remove(powerUpList[0].gameObject);
 
-            timerDestroy -= destroyInterval;
+            timerDestroy = 0;
 
         }
     }

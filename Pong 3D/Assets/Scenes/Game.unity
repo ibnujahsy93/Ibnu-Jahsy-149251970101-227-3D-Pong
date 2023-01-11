@@ -6579,8 +6579,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnArea: {fileID: 824236249}
   maxPowerUpAmount: 3
-  spawnInterval: 5
-  destroyInterval: 10
+  spawnInterval: 3
+  destroyInterval: 15
   powerUpAreaMin: {x: -2.3, y: 0.3, z: -3}
   powerUpAreaMax: {x: 2.3, y: 0.3, z: 2}
   powerUpTemplateList:
@@ -6588,6 +6588,8 @@ MonoBehaviour:
   - {fileID: 898829273}
   - {fileID: 876552963}
   - {fileID: 48798786}
+  timer: 0
+  timerDestroy: 0
 --- !u!4 &1696553406
 Transform:
   m_ObjectHideFlags: 0

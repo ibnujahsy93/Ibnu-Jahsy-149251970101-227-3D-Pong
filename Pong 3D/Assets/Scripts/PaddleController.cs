@@ -82,48 +82,7 @@ public class PaddleController : MonoBehaviour
 
    
 
-    private Vector3 BotMovement()
-    {
-        
-        if (randomNumber == 1)
-        {
-            moveLeft = true;
-            
-            return Vector3.left * speed;
-        }
-        else if (randomNumber == 2)
-        {
-            moveLeft = false;
-            
-            return Vector3.right * speed;
-        }
 
-        if (moveLeft == true)
-        {
-            if (transform.position.x < -1)
-            {
-                moveLeft = false;
-                Debug.Log("tes kiri");
-                
-                return Vector3.right * speed;
-            }
-        }
-        else if (moveLeft == false)
-        {
-            if (transform.position.x > 1)
-            {
-                moveLeft = true;
-                Debug.Log("tes kanan");
-
-                return Vector3.left * speed;
-            }
-        }
-
-
-
-        return Vector3.zero;
-    }
-    
    
     
 
